@@ -6,26 +6,26 @@ public class InterfaceSegregationPrinciple {
 
 // a class should not be forced to implement interfaces it doesn't use.
 
-interface Fly {
-    void fly();
+interface Area {
+    void area();
 }
 
-interface Walk {
-    void walk();
+interface Volume {
+    void volume();
 }
 
-class Human implements Walk {
+class Square implements Area {
 
     @Override
-    public void walk() {
-        System.out.println("Human is walking");
+    public void area() {
+        // area calculation
     }
 }
 
-class Bird implements Fly {
+class Sphere implements Volume {
 
     @Override
-    public void fly() {
-        System.out.println("Bird is flying");
+    public void volume() {
+        // calculating volume
     }
 }

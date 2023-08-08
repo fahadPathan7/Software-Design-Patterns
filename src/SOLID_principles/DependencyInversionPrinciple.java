@@ -6,21 +6,23 @@ public class DependencyInversionPrinciple {
 
 // higher level modules should not depend on lower level modules. Instead, they both should depend on abstraction.
 
-interface Notifier {
-    void sendNotification(String message);
+interface AreaCalc {
+    void calculateArea(String height, String width);
 }
 
-class EmailNotifier implements Notifier {
+class Square2 implements AreaCalc {
+
     @Override
-    public void sendNotification(String message) {
-        // Logic to send notification via email
+    public void calculateArea(String height, String width) {
+        // calculating area
     }
 }
 
-class SMSNotifier implements Notifier {
+class Rectangle2 implements AreaCalc {
+
     @Override
-    public void sendNotification(String message) {
-        // Logic to send notification via SMS
+    public void calculateArea(String height, String width) {
+        // calculating area
     }
 }
 
